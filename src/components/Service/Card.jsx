@@ -1,13 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
+// import Link from 'link-react';
 
 const Card = (props) => {
-    const { Icon, disc, title } = props;
+    const { Icon, disc, title, image, link, ghLink } = props;
   return (
     <Container>
-        <span className='green'><Icon/></span>
+        {/* <span className='green'><Icon/></span> */}
+        <img>{image}</img>
         <h1>{title}</h1>
         <p>{disc}</p>
+        <br/>
+        <button href={link} target='_blank'>Demo</button>
+        <button href={ghLink} target='_blank'>GitHub</button>
     </Container>
   )
 }
@@ -30,5 +35,10 @@ const Container = styled.div`
 
     p{
         font-size: 0.8rem;
+    }
+
+    button{
+        margin: .5rem;
+        padding: .5rem;
     }
 `

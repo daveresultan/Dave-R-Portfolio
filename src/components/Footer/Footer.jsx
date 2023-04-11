@@ -7,6 +7,7 @@ import { AiFillGithub, AiFillLinkedin, AiOutlineArrowUp } from "react-icons/ai";
 import { BsFacebook, BsSlack } from "react-icons/bs";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { Slide, Zoom, Fade } from "react-awesome-reveal";
+import { send } from 'emailjs-com';
 
 const Footer = () => {
   const scrollUp = () => {
@@ -19,18 +20,19 @@ const Footer = () => {
     <Container id="footer">
       <Profile>
         <Slide direction="left" delay={1}>
-          <h1>Portfolio</h1>
+          <h1>Dave Resultan</h1>
         </Slide>
-        <div className="address">
+        {/* <div className="address">
           <Slide direction="left">
             <h1>Address:</h1>
           </Slide>
           <Slide direction="left">
             <p>1030 Southwood Dr San Luis Obispo, California(CA), 93401</p>
           </Slide>
-        </div>
+        </div> */}
         <div className="links">
           <Slide direction="left">
+            <br/>
             <h1>Contact me directly:</h1>
           </Slide>
           <div>
@@ -38,7 +40,7 @@ const Footer = () => {
               <FiPhoneCall />
             </span>
             <Slide direction="left">
-              <a href="tel:+4733378901">+47 333 78 901</a>
+              <a href="tel:+13477211249">+1 347 721 1249</a>
             </Slide>
           </div>
           <div>
@@ -48,7 +50,7 @@ const Footer = () => {
               </span>
             </Slide>
             <Slide>
-              <a href="mailto:miladamiri@gmail.com">miladamiri@gmail.com</a>
+              <a href="mailto:dave.resultan@gmail.com">dave.resultan@gmail.com</a>
             </Slide>
           </div>
         </div>
@@ -59,32 +61,32 @@ const Footer = () => {
           <div className="icons">
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://github.com/daveresultan" target="_blank">
                   <AiFillGithub />
                 </a>
               </span>
             </Zoom>
             <Zoom>
               <span>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/daveresultan/" target="_blank">
                   <AiFillLinkedin />
                 </a>
               </span>
             </Zoom>
-            <Zoom>
+            {/* <Zoom>
               <span>
                 <a href="/">
                   <BsFacebook />
                 </a>
               </span>
-            </Zoom>
-            <Zoom>
+            </Zoom> */}
+            {/* <Zoom>
               <span>
                 <a href="/">
                   <BsSlack />
                 </a>
               </span>
-            </Zoom>
+            </Zoom> */}
           </div>
         </div>
         <Fade>
@@ -100,7 +102,7 @@ const Footer = () => {
               <span>
                 <CgProfile />
               </span>
-              <input type="text" placeholder="Fullname..." />
+              <input type="text" placeholder="Full Name..." />
             </div>
             <div className="email">
               <span>
@@ -118,6 +120,37 @@ const Footer = () => {
           </form>
         </Slide>
       </Form>
+      {/* <Form onSubmit={onSubmit}>
+  <input
+    type='text'
+    name='from_name'
+    placeholder='from name'
+    value={toSend.from_name}
+    onChange={handleChange}
+  />
+  <input
+    type='text'
+    name='to_name'
+    placeholder='to name'
+    value={toSend.to_name}
+    onChange={handleChange}
+  />
+  <input
+    type='text'
+    name='message'
+    placeholder='Your message'
+    value={toSend.message}
+    onChange={handleChange}
+  />
+  <input
+    type='text'
+    name='reply_to'
+    placeholder='Your email'
+    value={toSend.reply_to}
+    onChange={handleChange}
+  />
+  <button type='submit'/>Submit<button/>
+</Form> */}
     </Container>
   );
 };

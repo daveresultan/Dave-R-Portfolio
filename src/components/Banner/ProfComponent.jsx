@@ -1,42 +1,47 @@
 import React from "react";
 import styled from "styled-components";
 import { AiOutlineInstagram } from "react-icons/ai";
-import { GiEarthAmerica } from "react-icons/gi";
+import { GoMarkGithub } from "react-icons/go";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
 
 const ProfComponent = () => {
+  const scrollDown = () => {
+    window.scroll({
+      top: 10000,
+      behavior: "smooth",
+    })
+  };
   return (
     <Container id="home">
       <Slide direction="left">
         <Texts>
           <h4>
-            Hello <span className="green">I'am</span>
+            Hi there! <span className="green">My name is</span>
           </h4>
-          <h1 className="green">Milad Amiri</h1>
-          <h3>UX/UI Designer and graphic designer</h3>
+          <h1 className="green">Dave Resultan</h1>
+          <h3>Full Stack Web Developer</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            iusto. Adipisci in qui officia provident tenetur sequi, deserunt
-            corporis quos?
+            Based in Brooklyn, NY. <br/> <br/>
+            I'm looking to connect with fellow web developers, both students and industry professionals alike. <br/> <br/>Experienced in JS, React, Node, Express, MongoDB, HTML & CSS.
           </p>
-          <button>Let's talk</button>
+          <button onClick={scrollDown}>Let's talk</button>
           <Social>
             <p>Check out my</p>
             <div className="social-icons">
               <span>
-                <a href="/">
+                <a href="https://www.linkedin.com/in/daveresultan/" target="_blank">
+                  <FaLinkedinIn />
+                </a>
+              </span>
+              <span>
+                <a href="https://www.instagram.com/daveresultan/" target="_blank">
                   <AiOutlineInstagram />
                 </a>
               </span>
               <span>
-                <a href="/">
-                  <GiEarthAmerica />
-                </a>
-              </span>
-              <span>
-                <a href="/">
-                  <FaLinkedinIn />
+                <a href="https://github.com/daveresultan" target="_blank">
+                  <GoMarkGithub />
                 </a>
               </span>
             </div>
@@ -45,8 +50,7 @@ const ProfComponent = () => {
       </Slide>
       <Slide direction="right">
         <Profile>
-          <img
-            src="https://res.cloudinary.com/ghazni/image/upload/v1659082282/Yt-portfolio/Untitled-1_drcspz.png"
+          <img src='/daveresultan3.jpg'
             alt="profile"
           />
         </Profile>
@@ -80,9 +84,14 @@ const Texts = styled.div`
     font-weight: 500;
   }
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: "Secular One", sans-serif;
     letter-spacing: 2px;
+  }
+  @media (max-width: 1000px) {
+    h1{
+      font-size: 2rem;
+    }
   }
   h3 {
     font-weight: 500;
